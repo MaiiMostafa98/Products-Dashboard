@@ -9,8 +9,9 @@ var thisUser = JSON.parse(localStorage.getItem("currentUser"));
 if(thisUser)
 { document.getElementById('welcome').innerHTML =`
   <h4> 
- <i class="fa-solid fa-circle-user fa-1x"></i> <span class="text-danger"> Welcome </span> ${thisUser.firstName} ${thisUser.lastName}  
+  <span class="text-success"> Welcome </span> ${thisUser.firstName} ${thisUser.lastName}  <i class="fa-regular fa-hand-peace"></i>
   </h4>
+  <h6 class="text-success text-center">Store Your Products Easily..</h6>
   `; }
 
 
@@ -58,7 +59,7 @@ function addProduct(){
       name : ProductName.value ,
       price : Number(productPrice.value) , // convert value of the price to number becouse any value from any input is string
       category : productCat.value ,
-      describtion : productDesc.value ,
+      description : productDesc.value ,
    };
 
 
@@ -72,7 +73,7 @@ function addProduct(){
    document.getElementById('alert').innerHTML = ""; // مسح الرسالة
 
    displayAllProducts();
-   clearInputs();
+   clearInputs1();
 
 };
 
@@ -89,7 +90,7 @@ function displayAllProducts(){
       <td>${allProducts[i].name}</td>
       <td>${allProducts[i].price}</td>
       <td>${allProducts[i].category}</td>
-      <td>${allProducts[i].describtion}</td>
+      <td>${allProducts[i].description}</td>
       <td> <button  onclick="editProduct( ${ i } )"  type="button" class="btn" data-bs-toggle="button"><i class="fa-solid fa-pen-to-square fs-5 text-primary "></i></button> </td>
       <td> <button  onclick="deleteProduct( ${ i } )"  type="button" class="btn" data-bs-toggle="button"><i class="fa-solid fa-trash fs-5 text-danger "></i></button> </td>
       </tr>
@@ -102,7 +103,7 @@ function displayAllProducts(){
 
 
 
-function clearInputs() {
+function clearInputs1() {
   ProductName.value = "";
   productPrice.value = "";
   productCat.value = "";
@@ -112,9 +113,10 @@ function clearInputs() {
 
 
 
+
 function cancelEditing(){
 
-  clearInputs();
+  clearInputs1();
 
   document.getElementById('convertAddToEdit').innerHTML= `
 
@@ -180,12 +182,10 @@ function updateProduct(){
   // b3d el update lazm n3ml set item tany 
   localStorage.setItem('allProducts', JSON.stringify(allProducts));
 
-
   // bn3rdha b3d ma dfnaha
   displayAllProducts();
-  clearInputs();
 
-  updateIndex = null ; // 3lshan my7salsh laghbata lma a3ml delete lel element ely 3dlto
+  clearInputs1();
 
   document.getElementById('convertAddToEdit').innerHTML= `
   
@@ -193,7 +193,12 @@ function updateProduct(){
 
   `
 
+  updateIndex = null ; // 3lshan my7salsh laghbata lma a3ml delete lel element ely 3dlto
+
+  document.getElementById('alert').innerHTML = 'Product updated successfully!';
+
 }
+
 
 
 
@@ -227,7 +232,8 @@ function search(){
 
 
 function logout(){
-  window.location.href = "../index.html";
+   localStorage.removeItem("currentUser");
+  window.location.href = "./index.html";
 }
 
 

@@ -83,10 +83,21 @@ function goToLogin(){
 
       document.getElementById('convertToLogin').innerHTML = `
      
+      <div class="row mb-5 border-2 border-bottom border-secondary  d-flex align-items-center">
+
+      <div class="col-md-4 col-sm-4">
+            <img src="./undraw_groceries_4via.png" class="custom-img  ">
+      </div>
+      <div class="col-md-8 col-sm-8">
+         <h4 class="text-success text-end">Manage your products easily after login..</h4>
+      </div>
+
+      </div>
+
       <label for="loginEmail"> Email </label>
       <input id="loginEmail" type="email" class="form-control mb-3" >
 
-      <label for="loginPass"> Passowrd </label>
+      <label for="loginPass"> Password </label>
       <input id="loginPass" type="password" class="form-control mb-3" >
 
       <h1 id="alert" class="text-center text-danger">  </h1>
@@ -120,11 +131,13 @@ function logingin(){
         localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
         // نروح للدashboard
-        window.location.href = "./Dashboard/Dashboard.html";
+        window.location.href = "./Dashboard.html";
     } else {
         document.getElementById('alert').innerHTML =
           'Invalid email or password';
     }
 }
+
+
 
 
