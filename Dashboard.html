@@ -19,16 +19,15 @@
 
    <div class="container py-3">
 
-    <div class="row mb-5 border-2 border-bottom border-secondary  d-flex align-items-center">
+    <!-- <div class="row mb-5 border-2 border-bottom border-secondary  d-flex align-items-center">
 
-      <div class="col-md-4 col-sm-3">
-            <img src="./undraw_groceries_4via.png" class="custom-img  ">
+      <div class="col-12 col-md-4 bg-danger">
+            <img src="./undraw_groceries_4via.png" class="img-fluid custom-img  ">
       </div>
 
-    <div id="welcome" class="col-md-4 col-sm-6 text-center ">  </div>
+    <div id="welcome" class="col-12 col-md-4 text-center ">  </div>
 
-    <div id="logout" class=" col-md-4 col-sm-3 text-end  ">
-      <!-- <button class="btn btn-outline-danger dropdown" onclick="logout()">Logout</button> -->
+    <div id="logout" class=" col-12 col-md-4 text-end  ">
        <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">More</button>
   <ul class="dropdown-menu dropdown-menu-light">
@@ -37,7 +36,33 @@
 </div>
     </div>
 
-   </div>
+   </div> -->
+
+   <div class="row mb-5 border-bottom border-secondary align-items-center">
+
+  <div class="col-12 col-md-4 text-center">
+    <img src="./undraw_groceries_4via.png" class="img-fluid custom-img" alt="groceries">
+  </div>
+
+  <div id="welcome" class="col-12 col-md-4 text-center"></div>
+
+  <div id="logout" class="col-12 col-md-4 text-md-end text-center mt-3 mt-md-0">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        More
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+          <button class="dropdown-item text-danger" onclick="logout()">
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
 
     <!-- <h4 class="text-success text-center">Store Your Products Easily..</h4> -->
 <div class="container py-3 ">

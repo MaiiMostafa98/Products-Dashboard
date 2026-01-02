@@ -83,13 +83,14 @@ function goToLogin(){
 
       document.getElementById('convertToLogin').innerHTML = `
      
-      <div class="row mb-5 border-2 border-bottom border-secondary  d-flex align-items-center">
+      <div class="row mb-5 border-bottom border-secondary align-items-center">
 
-      <div class="col-md-4 col-sm-4">
-            <img src="./undraw_groceries_4via.png" class="custom-img  ">
+      <div class="col-12 col-md-4 text-center text-md-start">
+         <img src="./undraw_groceries_4via.png" class="img-fluid custom-img" alt="groceries">
       </div>
-      <div class="col-md-8 col-sm-8">
-         <h4 class="text-success text-end">Manage your products easily after login..</h4>
+
+      <div class="col-12 col-md-8">
+         <h4 class="text-success text-center text-md-end"> Manage your products easily after login.. </h4>
       </div>
 
       </div>
