@@ -79,38 +79,21 @@ function registerForNewEmail(){
     document.getElementById('alert').innerHTML = '';
 }
 
+
+
+
+
 function goToLogin(){
 
-      document.getElementById('convertToLogin').innerHTML = `
-     
-      <div class="row mb-5 border-bottom border-secondary align-items-center">
-
-      <div class="col-12 col-md-4 text-center text-md-start">
-         <img src="./undraw_groceries_4via.png" class="img-fluid custom-img" alt="groceries">
-      </div>
-
-      <div class="col-12 col-md-8">
-         <h4 class="text-success text-center text-md-end"> Manage your products easily after login.. </h4>
-      </div>
-
-      </div>
-
-      <label for="loginEmail"> Email </label>
-      <input id="loginEmail" type="email" class="form-control mb-3" >
-
-      <label for="loginPass"> Password </label>
-      <input id="loginPass" type="password" class="form-control mb-3" >
-
-      <h1 id="alert" class="text-center text-danger">  </h1>
-
-      <div>
-         <button id=""  onclick="logingin()" class="btn btn-outline-success me-2 ">Login</button>
-      </div>
-
-   `;
+     window.location.href = "./Login.html";
 
 }
 
+function goToRegister(){
+
+     window.location.href = "./index.html";
+
+}
 
 
 
@@ -142,3 +125,39 @@ function logingin(){
 
 
 
+
+
+
+
+
+// function goToLogin(){
+
+//       document.getElementById('convertToLogin').innerHTML = `
+     
+//       <div class="row mb-5 border-bottom border-secondary align-items-center">
+
+//       <div class="col-12 col-md-4 text-center text-md-start">
+//          <img src="./undraw_groceries_4via.png" class="img-fluid custom-img" alt="groceries">
+//       </div>
+
+//       <div class="col-12 col-md-8">
+//          <h4 class="text-success text-center text-md-end"> Manage your products easily after login.. </h4>
+//       </div>
+
+//       </div>
+
+//       <label for="loginEmail"> Email </label>
+//       <input id="loginEmail" type="email" class="form-control mb-3" >
+
+//       <label for="loginPass"> Password </label>
+//       <input id="loginPass" type="password" class="form-control mb-3" >
+
+//       <h1 id="alert" class="text-center text-danger">  </h1>
+
+//       <div>
+//          <button id=""  onclick="logingin()" class="btn btn-outline-success me-2 ">Login</button>
+//       </div>
+
+//    `;
+
+// }

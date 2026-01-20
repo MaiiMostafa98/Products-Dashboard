@@ -37,6 +37,7 @@ if (localStorage.getItem('allProducts') != null) {
 
 
 
+
 // calling lel function ely hat3rd el data 3lshan tt3rd awel ma el user yft7
 displayAllProducts()
 
@@ -254,7 +255,7 @@ function search(){
 
 function logout(){
    localStorage.removeItem("currentUser");
-  window.location.href = "./index.html";
+  window.location.href = "./Login.html";
 }
 
 
