@@ -188,7 +188,7 @@ function updateProduct(){
   allProducts[updateIndex].name = ProductName.value;
   allProducts[updateIndex].price = Number(productPrice.value);
   allProducts[updateIndex].category = productCat.value;
-  allProducts[updateIndex].describtion = productDesc.value;
+  allProducts[updateIndex].description = productDesc.value;
 
 
   // b3d el update lazm n3ml set item tany 
@@ -257,6 +257,14 @@ function logout(){
   window.location.href = "./index.html";
 }
 
+
+function veiwProducts(){
+  window.location.href = "./Products.html";
+}
+
+function veiwDashboard(){
+  window.location.href = "./Dashboard.html";
+}
 
 
 var darkBtn = document.querySelector('#darkBtn');
